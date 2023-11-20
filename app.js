@@ -21,37 +21,6 @@ app.listen(PORT, (err) => {
     console.log("Server error");
   } else {
     console.log("Listning on port " + PORT);
-    const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-
-    const currentTimestamp = Date.now();
-    const currentDate = new Date(currentTimestamp);
-    const currentMonthIndex = currentDate.getMonth();
-    const currentMonthName = monthNames[currentMonthIndex];
-
-    console.log(
-      "Current Month:",
-      currentMonthName,
-      currentDate.getDate(),
-      currentDate.getHours(),
-      currentDate.getFullYear()
-    );
-    
-
-    if(currentDate.getHours() >= 11.15){
-        console.log(`${currentDate.getHours()}.${currentDate.getMinutes()}` );
-    }
+  
   }
 });
