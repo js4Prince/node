@@ -17,7 +17,7 @@ const userLogin= async (req,resp,next)=>{
             resp.status(200).json({result:"User does not exists "})
         }else
         if(data.email === req.body.email  && data.password === req.body.password){
-            jwt.sign({data},process.env.SECRETKEY,{expiresIn:'30s'} ,(err,token)=>{
+            jwt.sign({data},process.env.SECRETKEY,{expiresIn:'8h'} ,(err,token)=>{
                 if(err){
                     console.log(err.message)
                 }else(
